@@ -2,7 +2,7 @@
 set -e
 
 # Replace with your dataset dir
-export DATA_ROOT="/path/to/dataset"
+export DATA_ROOT="/home/patrick/ssd/discover-hidden-visual-concepts/data"
 cd $DATA_ROOT
 
 
@@ -19,32 +19,32 @@ popd
 
 
 ###* Download ImageNet val *###
-echo "Downloading ImageNet val"
-mkdir -p ImageNet/ILSVRC2012
-pushd ImageNet/ILSVRC2012
-wget --progress=bar \
-   https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar \
-   -O ILSVRC2012_img_val.tar
+##echo "Downloading ImageNet val"
+#mkdir -p ImageNet/ILSVRC2012
+#pushd ImageNet/ILSVRC2012
+#wget --progress=bar \
+##   https://image-net.org/data/ILSVRC/2012/ILSVRC2012_img_val.tar \
+#   -O ILSVRC2012_img_val.tar
 
-wget --progress=bar \
-   https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz \
-   -O ILSVRC2012_devkit_t12.tar.gz
-popd
+#wget --progress=bar \
+#   https://image-net.org/data/ILSVRC/2012/ILSVRC2012_devkit_t12.tar.gz \
+#   -O ILSVRC2012_devkit_t12.tar.gz
+#popd
 
 
 ###* Download broden1_224 *###
-if [ ! -f Broden/broden1_224/index.csv ]
-then
+#if [ ! -f Broden/broden1_224/index.csv ]
+#then
 
-echo "Downloading broden1_224"
-mkdir -p Broden
-pushd Broden
-wget --progress=bar \
-   http://netdissect.csail.mit.edu/data/broden1_224.zip \
-   -O broden1_224.zip
-unzip broden1_224.zip
-rm broden1_224.zip
-popd
+#echo "Downloading broden1_224"
+#mkdir -p Broden
+#pushd Broden
+#wget --progress=bar \
+#   http://netdissect.csail.mit.edu/data/broden1_224.zip \
+#   -O broden1_224.zip
+#unzip broden1_224.zip
+#rm broden1_224.zip
+#popd
 
 fi
 
